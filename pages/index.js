@@ -4,7 +4,8 @@ import Header from "../components/Header";
 import SmallCard from "../components/SmallCard";
 import MediumCard from "../components/MediumCard";
 import LargeCard from "../components/LargeCard";
-
+import Footer from "../components/Footer";
+import DiscoverCard from "../components/DiscoverCard";
 import {
   smallCardData,
   mediumCardData,
@@ -47,13 +48,32 @@ export default function Home({ cardsData }) {
             ))}
           </div>
         </section>
+
+        <section>
+          <h2 className="text-3xl font-bold pb-5 py-8">
+            Discover things to do
+          </h2>
+          <div className="flex overflow-scroll scrollbar-hide p-3 space-x-9">
+            {discoverData.map(({ image, title, desc }) => (
+              <DiscoverCard
+                image={image}
+                title={title}
+                desc={desc}
+                key={image}
+              />
+            ))}
+          </div>
+        </section>
+
         <LargeCard
-          img="https://links.papareact.com/4cj"
+          image="https://links.papareact.com/4cj"
           title="The Greatest Outdoors"
           description="Wishlists curated by Airbnb."
           buttonText="Get Inspired"
         />
       </main>
+
+      <Footer />
     </div>
   );
 }
