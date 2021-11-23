@@ -44,6 +44,8 @@ function Header() {
           <UserCircleIcon className="h-6" />
         </div>
       </div>
+
+      {searchInput && <h1>Hello world</h1>}
     </header>
   );
 }
