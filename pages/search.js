@@ -60,7 +60,7 @@ function search({ searchResults }) {
         </section>
 
         <section className="hidden xl:inline-flex xl:min-w-[600px]">
-          <Map />
+          <Map searchResults={searchResults} />
         </section>
       </main>
       <Footer />
@@ -74,6 +74,7 @@ export async function getServerSideProps() {
   const searchResults = await fetch("https://links.papareact.com/isz").then(
     (res) => res.json()
   );
+  console.log(searchResults);
   return {
     props: {
       searchResults,
