@@ -8,4 +8,8 @@ module.exports = {
       "miro.medium.com",
     ],
   },
+  env: {
+    mapbox_key:
+      "pk.eyJ1Ijoic29ob29vb20iLCJhIjoiY2t3Z2IzanRqMG13bjJxbnNpYTlxZ3dmaCJ9.2RG9OncqHZliU4clTBuP2A",
+  },
 };

@@ -1,8 +1,6 @@
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-
 import { useRouter } from "next/router";
-
 import { format } from "date-fns";
 import dateFns from "date-fns";
 import InfoCard from "../components/InfoCard";
@@ -23,8 +21,10 @@ function search({ searchResults }) {
     <div>
       <Header placeholder={`${location} | ${range} | ${noOfGuests} guests`} />
 
-      <main className="flex-grow pt-14 px-6">
-        <section>
+      {/* <main className="flex-grow pt-14 px-6">
+        <section> */}
+      <main className="flex">
+        <section className="flex-grow pt-14 px-6">
           <p className="text-xs">
             300+ Stays - {range} - for {noOfGuests} guests
           </p>
@@ -59,7 +59,7 @@ function search({ searchResults }) {
           </div>
         </section>
 
-        <section>
+        <section className="hidden xl:inline-flex xl:min-w-[600px]">
           <Map />
         </section>
       </main>
